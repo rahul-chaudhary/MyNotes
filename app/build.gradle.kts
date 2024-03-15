@@ -1,3 +1,5 @@
+// TODO() : Migrate from Kapt to KSP
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
