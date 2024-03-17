@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.mynotes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), INotesRVAdapter {
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity(), INotesRVAdapter {
         mbinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mbinding.root)
 
-        mbinding.recyclerView.layoutManager = LinearLayoutManager(this)
+        mbinding.recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL) //LinearLayoutManager(this)
         val adapter = NotesRVAdapter(this, this)
         mbinding.recyclerView.adapter = adapter
 
