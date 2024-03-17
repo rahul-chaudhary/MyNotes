@@ -19,7 +19,10 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures {
+        this.viewBinding = true
+        this.dataBinding = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -76,5 +79,8 @@ dependencies {
 
     // optional - Paging 3 Integration
     implementation(libs.androidx.room.paging)
+
+    //viewModel
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
 
 }

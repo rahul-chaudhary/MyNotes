@@ -39,6 +39,7 @@
         app:layout_constraintBottom_toTopOf="@+id/input"
         android:textColor="@color/white"
         android:visibility="visible"
+        android:onClick="submitNote"
         />
 
     </LinearLayout>
