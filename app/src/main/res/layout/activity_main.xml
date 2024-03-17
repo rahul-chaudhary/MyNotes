@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MALinearLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/MALinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView">
 
     <EditText
         android:id="@id/input"
         android:padding="30dp"
         android:layout_margin="10dp"
-        android:layout_weight="9"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:hint="@string/enter_a_note"
         android:textSize="16sp"
         android:inputType="textMultiLine"
@@ -31,9 +24,8 @@
     <androidx.appcompat.widget.AppCompatButton
         android:text="@string/submit"
         android:id="@+id/submit"
-        android:layout_weight="1"
         android:layout_margin="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/input"
@@ -42,17 +34,16 @@
         android:onClick="submitNote"
         />
 
-    </LinearLayout>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/MALinearLayout"
+        android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:listitem="@layout/item_note"
-    />
+        app:layout_constraintTop_toBottomOf="@+id/MALinearLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_note" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

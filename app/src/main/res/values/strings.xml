@@ -2,4 +2,6 @@
     <string name="app_name">MyNotes</string>
     <string name="enter_a_note">Enter a note</string>
     <string name="submit">Submit</string>
+    <string name="the_quick_brown_fox_jumps_over_the_lazy_dog">The quick brown fox jumps over the lazy dog</string>
+    <string name="delete_button">Delete Button</string>
 </resources>
