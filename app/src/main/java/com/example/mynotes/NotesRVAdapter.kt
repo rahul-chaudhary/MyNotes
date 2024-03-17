@@ -27,7 +27,7 @@ class NotesRVAdapter(private val context: Context, private val listener: INotesR
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return allNotes.size
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
