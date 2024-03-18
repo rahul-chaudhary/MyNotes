@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/MALinearLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MALinearLayout"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/beige"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="My Notes"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="@font/poppins_bold"
+        />
 
     <EditText
         android:id="@id/input"
-        android:padding="30dp"
-        android:layout_margin="10dp"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:autofillHints="name"
         android:hint="@string/enter_a_note"
-        android:textSize="16sp"
+        android:inputType="textMultiLine"
+        android:padding="30dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black_light"
-        android:inputType="textMultiLine"
-        android:autofillHints="name"
-        />
+        android:textSize="16sp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:text="@string/submit"
         android:id="@+id/submit"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:background="@drawable/rounded_corner_button_shape"
-        app:layout_constraintBottom_toTopOf="@+id/input"
+        android:onClick="submitNote"
+        android:text="@string/submit"
         android:textColor="@color/white"
         android:visibility="visible"
-        android:onClick="submitNote"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/input" />
 
 
     <androidx.recyclerview.widget.RecyclerView
