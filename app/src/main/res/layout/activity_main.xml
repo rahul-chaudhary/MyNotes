@@ -10,14 +10,15 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:text="My Notes"
+        android:text="@string/my_notes"
         android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="@font/poppins_bold"
+        android:textSize="40sp"
+        android:fontFamily="@font/poppins_bold"
         />
 
     <EditText
@@ -28,7 +29,6 @@
         android:autofillHints="name"
         android:hint="@string/enter_a_note"
         android:inputType="textMultiLine"
-        android:padding="30dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black_light"
         android:textSize="16sp" />
